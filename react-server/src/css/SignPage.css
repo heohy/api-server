@@ -1,0 +1,63 @@
+.login_box {
+  background-color: #e6efff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  margin: 5.5vh 26vw 5.5vh 26vw;
+  height: 90vh;
+}
+
+.bottom_box {
+  width: 30%;
+}
+
+#sign_logo {
+  margin: 2vw 2vw 0 2vw;
+  width: 15vw;
+  height: 15vw;
+}
+
+#text_logo {
+  background-color: #cedeff;
+  border-radius: 0 20px 20px 0;
+  padding: 7px;
+  font-size: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+strong {
+  font-size: 1.5rem;
+}
+
+a {
+  font-size: 0.9rem;
+}
+
+.top_box_sub_1 {
+  width: 100%;
+  margin: 3vh 0 0 0;
+}
+
+.bottom_box_sub_1 {
+  width: 100%;
+  margin: 1vh 0 2vh 0;
+}
+
+.bottom_box_sub_2.row {
+  margin: 0 0 2vh 0;
+}
+
+.waves-effect {
+  margin: 2vh 0 0 0;
+  background-color: #b09cd7;
+}
+
+.row {
+  margin: 0;
+}

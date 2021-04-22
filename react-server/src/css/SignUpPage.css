@@ -1,0 +1,35 @@
+.regist_box {
+  background-color: #e6efff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  margin: 5.5vh 26vw 5.5vh 26vw;
+  height: 90vh;
+}
+
+#slogan {
+  background-color: #c0d4f8;
+  width: 100%;
+  height: 8%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 5.5vh 0 3vh 0;
+}
+
+h5 {
+  color: white;
+  font-weight: bold;
+}
+
+#form-item {
+  margin: 1vh 0 1vh 0;
+}
+
+#gender-item {
+  margin: 0 3vw 0 0;
+}
