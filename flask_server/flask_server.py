@@ -12,9 +12,9 @@ from flask_cors import CORS, cross_origin, logging
 
 ###MYSQL Connection 연결
 conn = pymysql.connect(
-    host="localhost",
+    host="58.122.41.157",
     port=3306,
-    user="root",
+    user="remote",
     password="gjgurwls54!",
     db="api",
     charset="utf8"
