@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+.title_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+.inner_title_box {
+    color: white;
+    text-align: center;
+}
+
+.radio_box {
+    text-align: right;
+}

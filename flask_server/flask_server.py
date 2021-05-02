@@ -121,6 +121,22 @@ def signin_validate():
     return jsonify(res)
 
 
+@app.route("/signin_data", methods=['POST'])
+def signin_data():
+    req = json.loads(request.get_data(), encoding = "UTF-8")
+
+    sql = "select * from {} where idx < 500".format(req['table_category'])
+
+    curs.execute(sql)
+    rows = curs.fetchall()
+    
+    print(rows)
+    print(jsonify(rows))
+
+    return jsonify(rows)
+
+
+
 
 if __name__=='__main__':
     app.run()
