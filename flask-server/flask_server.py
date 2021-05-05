@@ -130,15 +130,20 @@ def signin_data():
     curs.execute(sql)
     rows = curs.fetchall()
     
-    print(rows)
-    print(jsonify(rows))
+    #print(rows)
+    #print(jsonify(rows))
 
     return jsonify(rows)
 
 
+@app.route("/textmining", methods=["POST"])
+def textmining():
+    req = json.loads(request.get_data(), encoding = "UTF-8")
+    res = [0, 1, 2, 3]
+    
+    print(req)
 
-
-
+    return jsonify(res) 
 
 
 if __name__=='__main__':
