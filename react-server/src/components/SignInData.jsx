@@ -27,13 +27,19 @@ class SignInData extends React.Component {
     }
 
     async loadReviewQuery() {
-        const data = await SignInDataQuery(this.state);
-        this.data = data;      // data는 lib에서 받아온 데이터
-
-        //console.log(data);
-        //console.log(this.state.items);
-        //console.log(this.data);
-        return
+        this.data = await SignInDataQuery(this.state);
+        this.state.items = this.data[0].slice(0, this.state.items.length);
+        
+        for (let i=0; i<this.state.items.length; i++) {
+            document.getElementById(i+"0").innerHTML = this.state.items[i][0];
+            document.getElementById(i+"1").innerHTML = this.state.items[i][1];
+            document.getElementById(i+"2").innerHTML = this.state.items[i][2];
+            document.getElementById(i+"3").innerHTML = this.state.items[i][3].substr(0, 10);
+            document.getElementById(i+"4").innerHTML = this.state.items[i][4]
+            document.getElementById(i+"5").innerHTML = this.state.items[i][5].substr(0, 40) + "...";
+            document.getElementById(i+"6").innerHTML = this.state.items[i][6];
+            document.getElementById(i+"7").innerHTML = this.state.items[i][7].substr(0, 10);
+        }
     }
 
     fetchMoreData = () => {
@@ -61,10 +67,7 @@ class SignInData extends React.Component {
 
     render() {
         this.loadReviewQuery();
-        let qwer = this.data[0];
 
-        console.log(typeof(qwer));
-        console.log(qwer);
         return (
             <>
                 <div className="title_box row">
@@ -135,14 +138,14 @@ class SignInData extends React.Component {
                     
                     {this.state.items.map((i, index) => (
                         <div className="row" style={style} key={index}>
-                            <p className="col s1">{index}</p>
-                            <p className="col s1">country</p>
-                            <p className="col s2">restaurant</p>
-                            <p className="col s2">title</p>
-                            <p className="col s1">rating</p>
-                            <p className="col s3">content</p>
-                            <p className="col s1">date</p>
-                            <p className="col s1">lang</p>
+                            <p className="col s1" id={index + "0"}>{index}</p>
+                            <p className="col s1" id={index + "1"}>country</p>
+                            <p className="col s2" id={index + "2"}>restaurant</p>
+                            <p className="col s2" id={index + "3"}>title</p>
+                            <p className="col s1" id={index + "4"}>rating</p>
+                            <p className="col s3" id={index + "5"}>content</p>
+                            <p className="col s1" id={index + "6"}>date</p>
+                            <p className="col s1" id={index + "7"}>lang</p>
                         </div>
                     ))}
 

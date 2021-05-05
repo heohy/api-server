@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../img/sign_image.png'
 import toast, { Toaster } from 'react-hot-toast';
-import { SignInValidate } from '../lib/SignInValidate'
+import { SignInValidate } from '../lib/SignInValidate';
 import '../css/SignPage.css';
 
 class SignPage extends React.Component {

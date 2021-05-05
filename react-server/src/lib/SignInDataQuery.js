@@ -6,11 +6,11 @@ export async function SignInDataQuery(state) {
     await axios.post("http://127.0.0.1:5000/signin_data", {
         table_category: state.table_category
     }).then((res) => {
-        console.log(res.data);
+        //console.log(res.data);
         resultRows.push(res.data);
     }).catch((err) => {
         console.log(err);
     })
 
-    return(resultRows);
+    return resultRows;
 }

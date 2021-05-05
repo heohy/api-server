@@ -1,12 +1,10 @@
 import axios from 'axios';
 import crypto from 'crypto-js';
 
-
 export async function SignInValidate(state) {
     const errMessage = [];
     let signin_validate = true;
     let hash_password = "";
-
 
     await axios.post("http://127.0.0.1:5000/signin_validate", {
         username: state.username,
@@ -19,7 +17,6 @@ export async function SignInValidate(state) {
     }).catch((err) => {
         console.log(err);
     })
-
 
     if(signin_validate === false) {
         errMessage.push("존재하지 않는 아이디 입니다.")
@@ -35,7 +32,6 @@ export async function SignInValidate(state) {
             signin_validate = false;
         }
     }
-
 
     return({
         validate: signin_validate,
