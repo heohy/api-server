@@ -1,3 +1,16 @@
 .output_box {
     text-align: center;
 }
+
+.calc_box {
+    
+    margin: 10px;
+    margin-top: 250px;
+    padding: 10px;
+}
+
+#description_box {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}

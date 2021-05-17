@@ -72,7 +72,7 @@ class SignInData extends React.Component {
             <>
                 <div className="title_box row">
                     <p className="inner_title_box col s10">
-                        <h3>pure_review</h3>
+                        <h3>분석 데이터</h3>
                     </p>
                     <p className="radio_box col s2">
                         <label>
@@ -123,7 +123,6 @@ class SignInData extends React.Component {
                     </p>
                 </div>
 
-                <hr />
 
                 <InfiniteScroll
                     dataLength={this.state.items.length}
